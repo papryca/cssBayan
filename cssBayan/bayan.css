@@ -1,0 +1,33 @@
+
+* {
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+.container {
+    width: 825px;
+    margin: 0 auto;
+}
+li {
+    list-style-type: none;
+}
+
+.accordion-header {
+    display: flex;
+}
+
+.accordion-content-container {
+    display: none;
+}
+
+.accordion-content-container:target {
+    display: inline-block;
+}
+
+.cross-button {
+    display: none;
+}
+
+.container:hover .cross-button {
+    display: block;
+}
