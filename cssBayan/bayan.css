@@ -5,29 +5,57 @@
 }
 
 .container {
+    font-family: sans-serif;
     width: 825px;
     margin: 0 auto;
+    line-height: 2;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
 }
+
 li {
     list-style-type: none;
 }
 
+h1 {
+    font-size: 48px;
+}
+
 .accordion-header {
     display: flex;
+    justify-content: space-between;
+    border-top: 2px solid gray;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .accordion-content-container {
     display: none;
 }
 
+.accordion-content-container img {
+    width: 500px
+}
+
 .accordion-content-container:target {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 32px 0;
+
+
+
 }
 
 .cross-button {
     display: none;
+    align-items: flex-end;
 }
 
-.container:hover .cross-button {
+.accordion:hover .cross-button {
     display: block;
 }
