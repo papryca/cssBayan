@@ -12,6 +12,7 @@
     font-size: 24px;
     font-weight: 700;
     color: black;
+
 }
 
 li {
@@ -22,40 +23,79 @@ h1 {
     font-size: 48px;
 }
 
-.accordion-header {
+.accordion__header {
     display: flex;
     justify-content: space-between;
     border-top: 2px solid gray;
 
 }
 
-a {
+.accordion:hover .name-link {
     text-decoration: none;
     color: black;
 }
-
-.accordion-content-container {
-    display: none;
+.accordion .name-link {
+    text-decoration: none;
+    color: blue;
 }
+
+.accordion .picture-block:target .name-link{
+    color: black;
+}
+
 
 .accordion-content-container img {
     width: 500px
 }
 
-.accordion-content-container:target {
+
+.accordion-content-container {
+    display: none;
+}
+
+
+.picture-block:target .accordion-content-container {
     display: flex;
     justify-content: center;
     margin: 16px 0 32px 0;
-
 
 
 }
 
 .cross-button {
     display: none;
+}
+
+.accordion:hover .picture-block:target .cross-button {
+    display: block;
+    margin-top: 10px;
+}
+.accordion:hover .picture-block:target .open-button{
+    display: none;
+}
+
+.open-button {
+    display: none;
     align-items: flex-end;
 }
 
-.accordion:hover .cross-button {
+.accordion:hover .open-button {
     display: block;
+    margin-top: 10px;
 }
+.picture-block:hover .accordion-content-container{
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 32px 0;
+}
+.picture-block:hover .cross-button{
+    display: block;
+    margin-top: 10px;
+}
+.picture-block:hover .open-button{
+    display: none;
+}
+
+
+
