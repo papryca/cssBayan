@@ -85,11 +85,12 @@ h1 {
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1400px) {
     html{
         font-size: 62.5%;
     }
-    .accordion:hover {
+    .accordion:hover,
+    .accordion:hover label{
         cursor: pointer
     }
     .accordion:hover .name-link {
