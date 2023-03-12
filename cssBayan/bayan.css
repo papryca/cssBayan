@@ -1,7 +1,7 @@
 
 * {
     box-sizing: border-box;
-    background-color: bisque;
+    background-color: rgba(246, 246, 233, 0.6);
 }
 
 .container {
@@ -10,8 +10,7 @@
     margin: 0 auto;
     line-height: 2;
     font-size: 24px;
-    font-weight: 700;
-    color: black;
+    font-weight: 900;
 
 }
 
@@ -29,73 +28,114 @@ h1 {
     border-top: 2px solid gray;
 
 }
-
+.accordion:hover{
+    cursor: pointer
+}
 .accordion:hover .name-link {
     text-decoration: none;
     color: black;
 }
-.accordion .name-link {
+
+.name-link {
     text-decoration: none;
     color: blue;
 }
 
-.accordion .picture-block:target .name-link{
+.picture-block:target .name-link {
     color: black;
 }
 
+.picture-block:active, .picture-block:active .name-link {
+    color: blue;
+}
+
+.picture-block:active {
+    opacity: 50%;
+}
 
 .accordion-content-container img {
-    width: 500px
+    height: 100%;
 }
 
 
 .accordion-content-container {
-    display: none;
-}
-
-
-.picture-block:target .accordion-content-container {
+    height: 0;
     display: flex;
     justify-content: center;
-    margin: 16px 0 32px 0;
-
-
+    transition: all 0.5s;
+    opacity: 30%;
 }
 
-.cross-button {
-    display: none;
+.picture-block:target .accordion-content-container {
+    margin: 16px 0 32px 0;
+    height: 250px;
+    transition: all 1.5s;
+    opacity: 100%;
+}
+
+.cross-button{
+    height: 0;
+    align-items: flex-end;
+    transition: all 0.5s;
+    opacity: 30%;
 }
 
 .accordion:hover .picture-block:target .cross-button {
-    display: block;
-    margin-top: 10px;
+    opacity: 100%;
+    height: 30px;
+    transition: all 0.5s;
 }
-.accordion:hover .picture-block:target .open-button{
+
+.accordion:hover .picture-block:target .open-button {
     display: none;
+
 }
 
 .open-button {
-    display: none;
+    height: 0;
     align-items: flex-end;
+    transition: all 0.5s;
+    opacity: 30%;
 }
 
 .accordion:hover .open-button {
-    display: block;
-    margin-top: 10px;
+    opacity: 100%;
+    height: 30px;
+    transition: all 0.5s;
 }
-.picture-block:hover .accordion-content-container{
-    display: block;
-    display: flex;
-    justify-content: center;
+
+.picture-block:hover .accordion-content-container {
     margin: 16px 0 32px 0;
+    height: 250px;
+    transition: all 1s;
+    opacity: 100%;
 }
-.picture-block:hover .cross-button{
-    display: block;
-    margin-top: 10px;
+
+.picture-block:hover .cross-button {
+    opacity: 100%;
+    height: 30px;
+    transition: all 1s;
 }
-.picture-block:hover .open-button{
-    display: none;
+
+.picture-block:hover .open-button {
+    height: 0;
+    opacity: 30%;
+    transition: all 0.5s;
 }
+
+.icons{
+    position: relative;
+    width: 15px;
+    height: 15px;
+}
+.open-button, .cross-button{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+}
+
+
+
 
 
 
