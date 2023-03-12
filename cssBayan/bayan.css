@@ -73,19 +73,19 @@ h1 {
     opacity: 50%;
     color: blue;
 }
-@media (min-width: 20rem) {
+@media (min-width: 320px) {
     html{
         font-size: 42.5%;
     }
 }
 
-@media (min-width: 51.25rem) {
+@media (min-width: 820px) {
     html{
         font-size: 52.5%;
     }
 }
 
-@media (min-width: 120rem) {
+@media (min-width: 1920px) {
     html{
         font-size: 62.5%;
     }
